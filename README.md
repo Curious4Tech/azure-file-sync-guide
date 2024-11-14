@@ -9,6 +9,12 @@ Step-by-step guide for implementing Azure File Sync with on-premises file shares
 
 > A step-by-step guide for setting up Azure File Sync using the Azure Portal interface. Perfect for administrators who prefer GUI-based configuration.
 
+#  🏗 Architecture Overview
+
+┌─────────────────┐     ┌──────────────────┐     ┌────────────────┐
+│  On-Premises    │     │   Azure File     │     │    Azure       │
+│  File Server    ├────►│     Sync         ├────►│  File Share    │
+└─────────────────┘     └──────────────────┘     └────────────────┘
 ## 📑 Table of Contents
 
 - [🔧 Prerequisites](#prerequisites)
