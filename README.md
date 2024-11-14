@@ -13,14 +13,44 @@ Step-by-step guide for implementing Azure File Sync with on-premises file shares
 
 
 
+# Azure File Sync Setup Guide 🔄
+
+[![Azure](https://img.shields.io/badge/Azure-0089D6?style=flat-square&logo=microsoft-azure&logoColor=white)](https://azure.microsoft.com/)
+[![Windows Server](https://img.shields.io/badge/Windows%20Server-0078D6?style=flat-square&logo=windows&logoColor=white)](https://www.microsoft.com/windows-server)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> A comprehensive guide for setting up Azure File Sync with on-premises file shares. This solution enables you to centralize your file services in Azure while maintaining local access to your data.
+
+## 📑 Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Architecture Overview](#architecture-overview)
+- [Installation Steps](#installation-steps)
+  - [Creating On-Premises File Share](#creating-on-premises-file-share)
+  - [Azure Portal Configuration](#azure-portal-configuration)
+  - [Azure File Sync Agent Setup](#azure-file-sync-agent-setup)
+- [Configuration](#configuration)
+- [Monitoring](#monitoring)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+
+## 🔧 Prerequisites
+
+- Windows Server 2012 R2 or later
+- Azure Subscription
+- Network connectivity (ports 445 and 443)
+- Azure Admin privileges
+- PowerShell 5.0 or later
+
+## 🏗 Architecture Overview
+
+```plaintext
 ┌─────────────────┐     ┌──────────────────┐     ┌────────────────┐
 │  On-Premises    │     │   Azure File     │     │    Azure       │
 │  File Server    ├────►│     Sync         ├────►│  File Share    │
 └─────────────────┘     └──────────────────┘     └────────────────┘
-
-
-
-
+```
 
 ## 📑 Table of Contents
 
