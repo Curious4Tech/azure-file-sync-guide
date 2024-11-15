@@ -24,7 +24,8 @@ Step-by-step guide for implementing Azure File Sync with on-premises file shares
 - [🖥️ Step 1: Create File Share in Windows Server](#step-1-create-file-share-in-windows-server)
 - [☁️ Step 2: Create an Azure File Share](#step-2-create-an-azure-file-share)
 - [⚙️ Step 3: Deploy the Azure File Sync Service](#deploy-the-azure-file-sync-service)
-- [📝 Step 4: Server Registration](#step-4-server-registration)
+- [⚙️Step 4: Azure File Sync Service Configuration](#⚙step-4-azure-file-sync-service-configuration)
+- [📝 Step 5: Server Registration](#step-5-server-registration)
 - [🔄 Step 5: Sync Configuration](#step-5-sync-configuration)
 - [📊 Monitoring and Management](#monitoring-and-management)
 - [🔍 Troubleshooting](#troubleshooting)
@@ -141,14 +142,56 @@ Step-by-step guide for implementing Azure File Sync with on-premises file shares
 ![image](https://github.com/user-attachments/assets/211e04f4-a235-4e64-b31f-471ff1c8ac2e)
 
 
+## 📝 Step 5: Server Registration : Configure Azure File Sync on the Windows Server
 
-Step 4: Configure Azure File Sync on the Windows Server
-Open the Azure File Sync agent and sign in with your Azure credentials.
+   - In the Azure sync service, click on**`Registered servers`**  and then download the Azure File Sync agent from the Azure portal by clicking on **`Azure file sync agent`**.
 
-Register the server with the Azure File Sync service.
 
-Select the Sync Group you created earlier and add the server endpoint.
+![image](https://github.com/user-attachments/assets/a3aa3a81-362b-4e8b-ac25-b7709e2b6e22)
 
+
+ - Choose your prefered language and then clcik on **`Download`**
+
+
+![image](https://github.com/user-attachments/assets/49b16bd0-05ff-4f19-82bf-69aebe118ef2)
+
+
+ - Choose your windows server version, for me it is **`Windows server 2022`** and then click on **`Dowload`**
+
+
+![image](https://github.com/user-attachments/assets/cbb743b2-f945-4e98-b753-ae3b1b37d2c3)
+
+ - After downloding the agent, install it by just following the wizard, it's very simple.
+
+![image](https://github.com/user-attachments/assets/a4147da0-17f3-4ad3-a5cd-67e5452ced7a)
+
+  - Now a new wizard will open to register yor serrver, choose **`AzureCloud`** or different based on the cloud type you're using, you can see that on the proposition. Then click on **`Sign in`** to start the registration.
+
+
+![image](https://github.com/user-attachments/assets/2207e7ac-f875-4a70-a431-420110c4c2be)
+
+  - Provide your Azure account credentials (email and password or Azure account).
+
+
+![image](https://github.com/user-attachments/assets/86b7c5ae-3f44-444d-b540-56991f308ee4)
+
+  - Now provide all the detail informations(Subscription, Resource group and storage sync service) on the new panel that is going to open. Make sure you choose acccording to your previous configuration in case you multiple subscriptions, resource groups or storage sync services. Then click on **`Register`**
+
+
+![image](https://github.com/user-attachments/assets/b2a8f763-225c-4fba-b6af-daff05165078)
+
+  
+ - Now we are done with the server registration as you can see
+
+
+![image](https://github.com/user-attachments/assets/5076770a-bca5-4d72-a663-a928626be894)
+
+ - Now if you go back to the Azure portal in your files sync service under **`Sync>Registered servers`** you should see your registered servers
+
+![image](https://github.com/user-attachments/assets/06ac9140-8406-4c77-866f-f3c15b453d75)
+
+
+## 🔄 Step 5: Sync Configuration
 Configure the sync settings as needed (e.g., bandwidth limits, schedule, etc.).
 
 Start the sync process to begin syncing files between your on-premises server and the Azure file share.
