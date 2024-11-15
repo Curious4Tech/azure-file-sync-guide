@@ -247,3 +247,5 @@ In the Internet Explorer Enhanced Security Configuration dialog box, set the opt
 Your hybrid cloud storage solution is ready to serve your organization's needs. As you continue your Azure journey, remember that this setup can be expanded and optimized to meet your growing requirements.
 
 🎉 Congratulations! You've Set Up Azure File Sync!
+
+Happy Syncing! 🎊
